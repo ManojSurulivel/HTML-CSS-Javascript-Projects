@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2C3E50;
+    }
+    .dice-container {
+    text-align: center;
+    border: 1px solid white;
+    display: grid;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    }
+    .dice {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    padding: 15px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto;
+    transform: rotate(0);
+    transition: transform 0.6s ease-in-out;
+    }
+    .dot {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    justify-self: center;
+    align-self: center;
+    }
+    button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    }

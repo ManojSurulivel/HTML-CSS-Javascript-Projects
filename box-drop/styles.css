@@ -1,0 +1,22 @@
+body{
+    background-color: black;   
+}
+
+.row{
+    display: flex; 
+    align-items: center;
+    text-align: center; 
+    margin-top: 50px;
+}
+
+.pic1{
+    width: 50%;
+     border: 1px solid white;
+    box-shadow: 1px 1px 20px yellow; 
+}
+.pic2{
+    width: 50%;
+    filter: drop-shadow(1px 1px 20px yellow);
+} 
+
+
