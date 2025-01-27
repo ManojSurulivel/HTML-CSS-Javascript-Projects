@@ -1,0 +1,50 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: radial-gradient(circle, #1c1c1c, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bubble Container Styling */
+.bubble-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Bubble Styling */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+    animation: float linear infinite, bubble-size ease-in-out infinite;
+    cursor: pointer;
+    filter: blur(1px);
+}
+
+/* Bubble Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Bubble Size Animation */
+@keyframes bubble-size {
+    0%, 100% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

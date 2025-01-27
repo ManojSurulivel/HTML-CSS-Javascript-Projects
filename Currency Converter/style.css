@@ -1,0 +1,113 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  animation: gradientAnimation 8s infinite alternate;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating Effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffde59;
+  text-shadow: 0px 5px 20px rgba(255, 222, 89, 0.8);
+}
+
+.converter {
+  margin-top: 20px;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+input:focus, select:focus {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.4);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6f61, #ff9068);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 10px 20px rgba(255, 111, 97, 0.5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 30px rgba(255, 111, 97, 0.7);
+}
+
+.result-section {
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#result {
+  font-size: 1.5rem;
+  color: #ffefd5;
+  text-shadow: 0px 3px 10px rgba(255, 255, 255, 0.8);
+}

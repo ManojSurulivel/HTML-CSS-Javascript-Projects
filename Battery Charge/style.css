@@ -1,0 +1,104 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #2c5364, #203a43);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  animation: gradientMove 8s infinite alternate;
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating effect */
+@keyframes float {
+  0%, 100% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffde59;
+  text-shadow: 0px 5px 20px rgba(255, 222, 89, 0.8);
+}
+
+/* Battery Container */
+.battery {
+  width: 150px;
+  height: 300px;
+  margin: 20px auto;
+  position: relative;
+  background: #444;
+  border: 4px solid #888;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.battery-level {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(45deg, #32cd32, #00ff00);
+  transition: height 0.5s ease-in-out;
+  box-shadow: 0px 0px 15px 3px rgba(50, 205, 50, 0.8);
+}
+
+.battery-cap {
+  width: 40%;
+  height: 10px;
+  background: #888;
+  position: absolute;
+  top: -14px;
+  left: 30%;
+  border-radius: 5px;
+}
+
+/* Charge percentage text */
+#chargePercentage {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #00ff00;
+  text-shadow: 0px 3px 10px rgba(0, 255, 0, 0.8);
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6f61, #ff9068);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 10px 20px rgba(255, 111, 97, 0.5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 30px rgba(255, 111, 97, 0.7);
+}

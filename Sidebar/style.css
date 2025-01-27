@@ -1,0 +1,154 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: -260px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .profile {
+  text-align: center;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile h2 {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sidebar ul li:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+}
+
+/* Content Styling */
+.content {
+  margin-left: 0;
+  transition: margin-left 0.5s ease-in-out;
+  padding: 40px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.content.shift {
+  margin-left: 260px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6f61, #ff9068);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 10px 20px rgba(255, 111, 97, 0.5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 30px rgba(255, 111, 97, 0.7);
+}
+
+h1, p {
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Glow Animation */
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  z-index: -1;
+  filter: blur(10px);
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}

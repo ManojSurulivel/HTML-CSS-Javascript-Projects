@@ -1,0 +1,218 @@
+/* #1d2671, #c33764 */
+/* 45deg, #5433FF, #20BDFF, #2575fc */
+/* background: linear-gradient(45deg, #009FFF, #ec2F4B); */
+
+/* style.css */
+
+/* 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, black, black);
+    overflow: hidden;
+    color: rgb(18, 3, 3);
+  }
+  
+  .clock-container {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .clock {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    animation: glowEffect 2s infinite alternate;
+  }
+  
+  @keyframes glowEffect {
+    0% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+  .time {
+    font-weight: bold;
+    color: #3cce37;
+    text-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  .colon {
+    font-size: 4rem;
+    color: #eb2929;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .ampm {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #f13e53;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+   */
+
+
+   /* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ED213A, #FDC830);
+    background-size: 300% 300%;
+    animation: backgroundAnimation 10s infinite;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Animated gradient background */
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .clock-container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Smooth fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .clock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 6rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 255, 255, 0.3);
+    animation: neonGlow 2s infinite alternate;
+  }
+  
+  /* Neon glow animation */
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6), 0 0 80px rgba(255, 255, 255, 0.7);
+    }
+  }
+  
+  .time {
+    font-weight: bold;
+    color: #ffffff;
+    /* text-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5), 0px 0px 15px rgba(255, 255, 255, 0.8); */
+    animation: pulse 1s infinite alternate;
+  }
+  
+  /* Pulse effect for numbers */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .colon {
+    font-size: 6rem;
+    color: white;
+    animation: blink 1s infinite;
+  }
+  
+  /* Blinking colon */
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .ampm {
+    font-size: 2rem;
+    margin-left: 10px;
+    color: #90e0ef;
+    text-shadow: 0px 3px 10px rgba(144, 224, 239, 0.8);
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* Smooth slide-in effect for AM/PM */
+  @keyframes slideIn {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

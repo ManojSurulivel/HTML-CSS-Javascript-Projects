@@ -1,0 +1,130 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 200% 200%;
+  animation: backgroundAnimation 8s infinite alternate;
+  color: #ffffff;
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Floating animation for the container */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffde59;
+  text-shadow: 0px 5px 20px rgba(255, 222, 89, 0.8);
+}
+
+.quote-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-box::before,
+.quote-box::after {
+  content: '';
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  width: 200%;
+  height: 200%;
+  animation: rotateEffect 10s infinite linear;
+  z-index: 0;
+}
+
+.quote-box::before {
+  top: -150%;
+  left: -150%;
+}
+
+.quote-box::after {
+  bottom: -150%;
+  right: -150%;
+}
+
+/* Rotation effect for gradients */
+@keyframes rotateEffect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+#author {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ffd700;
+  position: relative;
+  z-index: 1;
+  text-align: right;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6f61, #ff9068);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  /* text-shadow: 0px 3px 10px rgba(255, 255, 255, 0.8); */
+}
+
+button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0px 10px 30px rgba(255, 111, 97, 0.6);
+}

@@ -1,12 +1,12 @@
-//CALLCULATOR PROGRAM
+// Caculator Program
 
 const display = document.getElementById("display");
 
-function appendToDisplay(input){
+function appendToDisplay(input) {
     display.value += input;
 }
 
-function clearDisplay(){
+function clearDisplay() {
     display.value = ""
 }
 

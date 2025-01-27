@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LoginForm</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <div class="input-box">
+            <input type="text" placeholder=" " id="username">
+            <span>Username</span>
+        </div>
+        <div class="input-box password-box">
+            <input type="password" placeholder=" " id="password">
+            <span>Password</span>
+            <button class="toggle-password" id="togglePassword">&#128065;</button>
+        </div>
+        <button class="submit-btn" id="loginBtn">Login</button>
+    </div>
+
+    <!-- Custom Alert Box -->
+    <div class="custom-alert" id="customAlert">
+        <div class="custom-alert-box">
+            <p id="alertMessage"></p>
+            <button class="custom-alert-btn" id="closeAlert">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

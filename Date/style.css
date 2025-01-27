@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s infinite;
+}
+
+.date-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fade-in 1.2s ease-out;
+}
+
+.date-form h2 {
+    font-size: 2rem;
+    color: #ff3d68;
+    text-shadow: 0 3px 10px rgba(255, 61, 104, 0.7);
+    animation: glow 1.5s infinite;
+}
+
+.date-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.date-form input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ff758c;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    background: linear-gradient(135deg, #fff, #fce4ec);
+    transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.date-form input[type="date"]:focus {
+    box-shadow: 0 4px 15px rgba(255, 61, 104, 0.4);
+    transform: scale(1.05);
+}
+
+.date-form input[type="submit"] {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff758c, #ff3d68);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.date-form input[type="submit"]:hover {
+    box-shadow: 0 6px 15px rgba(255, 61, 104, 0.6);
+    transform: translateY(-5px);
+}
+
+.date-form input[type="submit"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(255, 61, 104, 0.4);
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 3px 10px rgba(255, 61, 104, 0.7);
+    }
+    50% {
+        text-shadow: 0 5px 20px rgba(255, 61, 104, 1);
+    }
+}

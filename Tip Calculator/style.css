@@ -1,0 +1,135 @@
+/* style.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s infinite;
+    color: white;
+    overflow: hidden;
+  }
+  
+  /* Animated gradient background */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Smooth fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffda79;
+    text-shadow: 0px 4px 10px rgba(255, 218, 121, 0.9);
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 1rem;
+    text-shadow: 0 2px 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-shadow: 0px 1px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input:focus {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #ff6f61;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 3px 10px rgba(255, 111, 97, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(255, 111, 97, 0.6);
+  }
+  
+  .result {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1s ease-out;
+  }
+  
+  /* Slide-up effect for results */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #ffda79;
+  }
+  

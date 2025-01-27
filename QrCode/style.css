@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #8e44ad, #1e90ff);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.qr-wrapper {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: glowText 2s infinite alternate;
+}
+
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 10px #ff7eb3, 0 0 20px #ff7eb3, 0 0 30px #ff69b4;
+    }
+    100% {
+        text-shadow: 0 0 20px #1e90ff, 0 0 30px #8e44ad, 0 0 40px #8e44ad;
+    }
+}
+
+.qr-wrapper input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qr-wrapper input:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.5);
+}
+
+.qr-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7eb3, #8e44ad);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.qr-wrapper button:hover {
+    background: linear-gradient(90deg, #1e90ff, #8e44ad);
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#qr-result {
+    margin-top: 20px;
+    display: none;
+}
+
+#qrcode {
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+

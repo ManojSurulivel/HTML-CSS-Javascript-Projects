@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #8e44ad, #3498db);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.wave-container {
+    position: relative;
+    text-align: center;
+}
+
+.wave-text {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.wave-text span {
+    display: inline-block;
+    animation: wave 2s infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
